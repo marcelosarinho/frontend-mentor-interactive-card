@@ -22,7 +22,7 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 
 ## Geral
 
-Esse projeto é um validador de cartão, onde o usuário insere seu nome, número do cartão, mês e ano de expiração do cartão e o código de segurança, e então, se tudo estiver correto, prossegue para a próxima página.
+Esse projeto é um validador de cartão, onde o usuário insere seu nome, número do cartão, mês e ano de expiração do cartão e o código de segurança, e então, se tudo estiver correto, prossegue para a próxima página. Ao preencher as informações do cartão no formulário, a imagem do cartão é atualizada em tempo real.
 
 ### O desafio
 
@@ -36,12 +36,12 @@ Usuários devem ser capazes de:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot/screenshot.png)
 
 ### Links
 
-- Solução no Frontend Mentor: [Add solution URL here](https://your-solution-url.com)
-- Site: [Add live site URL here](https://your-live-site-url.com)
+- Solução no Frontend Mentor: [https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw/hub](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw/hub)
+- Site: [https://marcelosarinho.github.io/frontend-mentor-interactive-card/](https://marcelosarinho.github.io/frontend-mentor-interactive-card/)
 
 ## Meu processo
 
@@ -68,7 +68,6 @@ Continuar praticando flexbox e grid, além de aprofundar mais no JavaScript vani
 ### Recursos úteis
 
 - [How to insert space after four characters in html input?](https://stackoverflow.com/questions/28779631/how-to-insert-space-after-four-characters-in-html-input) - Isso me ajudou a criar a máscara para o input de número de cartão
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Autor
 
