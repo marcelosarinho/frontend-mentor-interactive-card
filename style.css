@@ -1,0 +1,435 @@
+:root {
+  --active-input: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  --red: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  background-image: url("./images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100% 24rem;
+  padding: 3rem 1.6rem;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.card-wrapper {
+  position: relative;
+  height: 25rem;
+  margin-bottom: 4.6rem;
+}
+
+.card-back,
+.card-front {
+  position: absolute;
+  max-width: 28.4rem;
+  color: var(--white);
+}
+
+.card-back > img,
+.card-front > img {
+  width: 100%;
+  box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.2);
+}
+
+.card-back {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin: 0 0 0 auto;
+  right: 0;
+}
+
+.card-back span {
+  position: absolute;
+  left: 22rem;
+  bottom: 7.2rem;
+}
+
+.card-front {
+  bottom: 0.7rem;
+}
+
+.card-info {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  padding: 1.6rem;
+  top: 0;
+}
+
+.card-info img {
+  width: 5.2rem;
+  margin-bottom: 3.8rem;
+}
+
+.card-info p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.card-complementary-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--very-dark-violet);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.card-complementary-info,
+.card-info,
+label {
+  letter-spacing: 2px;
+}
+
+input {
+  box-sizing: border-box;
+  padding: 1rem 1.4rem;
+  width: 100%;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+  border: 1px solid var(--light-grayish-violet);
+  border-radius: 8px;
+  color: var(--very-dark-violet);
+}
+
+input::placeholder {
+  color: var(--light-grayish-violet);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+input:focus {
+  outline: 1px solid;
+  outline-color: var(--active-input);
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  row-gap: 2rem;
+  column-gap: 1.2rem;
+}
+
+.d-block {
+  animation: fadeIn 1s;
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+form :nth-child(1),
+form :nth-child(2) {
+  grid-column: span 4 / span 4;
+}
+
+form :nth-child(3) {
+  grid-column: 1 / span 2;
+}
+
+form :nth-child(3) div {
+  display: flex;
+  gap: 0.8rem;
+}
+
+form :nth-child(3) input {
+  width: 50%;
+}
+
+form :nth-child(4) {
+  grid-column: 3 / span 2;
+}
+
+.error {
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  color: var(--red);
+}
+
+.error-border {
+  border: 1px solid var(--red);
+}
+
+button {
+  padding: 1.6rem 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--white);
+  background-color: var(--very-dark-violet);
+  letter-spacing: 1px;
+  grid-column: 1 / span 4;
+}
+
+button:focus {
+  outline: 1px solid #877ab5;
+}
+
+button:focus-visible {
+  outline: 2px solid #fffb28;
+}
+
+button:hover {
+  transition-property: background-color;
+  transition-duration: 3s;
+  transition: background-color, 0.4s;
+  cursor: pointer;
+  background-color: hsl(278, 67%, 17%);
+}
+
+div > button {
+  width: 100%;
+}
+
+.completed {
+  text-align: center;
+}
+
+.completed > img {
+  margin: 0 auto 4rem;
+}
+
+.completed h2 {
+  font-size: 2.4rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--very-dark-violet);
+}
+
+.completed h3 {
+  font-size: 1.6rem;
+  color: var(--dark-grayish-violet);
+}
+
+@media screen and (min-width: 560px) {
+  .card-back {
+    right: 8rem;
+  }
+
+  .card-front {
+    left: 8rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    background-image: url("./images/bg-main-desktop.png");
+    background-size: 33% 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 4rem;
+    height: 100vh;
+  }
+
+  .card-wrapper {
+    height: 40rem;
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+
+  .card-back, .card-front {
+    max-width: 30rem;
+    width: 30rem;
+  }
+
+  .card-back {
+    bottom: 0;
+    right: 0;
+  }
+
+  .card-back span {
+    bottom: 7.6rem;
+    left: 24rem;
+  }
+
+  .card-info {
+    height: fit-content;
+  }
+
+  .card-front {
+    height: fit-content;
+    top: 0;
+    left: 0;
+  }
+
+  form, .completed {
+    max-width: 30rem;
+    margin-right: 4rem;
+  }
+
+  .completed {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    justify-content: space-evenly;
+  }
+
+  .card-wrapper {
+    max-width: 61.8rem;
+    width: 100%;
+  }
+
+  .card-back, .card-front {
+    max-width: 34rem;
+    width: 100%;
+  }
+
+  .card-back {
+    font-size: 1.2rem;
+  }
+
+  .card-back span {
+    bottom: 8.5rem;
+    left: 27rem;
+  }
+
+  .card-info {
+    padding: 1.7rem;
+  }
+
+  .card-info img {
+    width: 6.5rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .card-info p {
+    font-size: 2.1rem;
+    margin-bottom: 2.8rem;
+  }
+
+  .card-complementary-info {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 18.4rem 16.4rem;
+    column-gap: 4.6rem;
+  }
+
+  .card-wrapper {
+    height: 52.7rem;
+    max-width: 56rem;
+  }
+
+  .card-back, .card-front {
+    max-width: 44.4rem;
+    right: 0;
+    left: 0;
+  }
+
+  .card-back img, .card-front img {
+    border-radius: 10px;
+  }
+
+  .card-back {
+    font-size: 1.3rem;
+    bottom: 0;
+    right: 0;
+  }
+
+  .card-back span {
+    bottom: 11.5rem;
+    left: 36rem;
+  }
+
+  .card-front {
+    top: 0;
+  }
+
+  .card-info {
+    padding: 2.4rem 3rem;
+  }
+
+  .card-info img {
+    width: 8.6rem;
+    margin-bottom: 6.8rem;
+  }
+
+  .card-info p {
+    font-size: 2.6rem;
+    letter-spacing: 0.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .card-complementary-info {
+    font-size: 1.4rem;
+  }
+
+  form, .completed {
+    max-width: 38rem;
+    margin-right: 8rem;
+  }
+
+  form {
+    row-gap: 2.4rem;
+  }
+  
+  button {
+    margin-top: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  body {
+    justify-content: space-evenly;
+  }
+
+  form, .completed {
+    max-width: 42rem;
+    margin-right: 0;
+  }
+
+  label {
+    font-size: 1.8rem;
+  }
+
+  input {
+    font-size: 2.2rem;
+  }
+
+  button {
+    font-size: 2rem;
+  }
+}
