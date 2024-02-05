@@ -47,7 +47,7 @@ Usuários devem ser capazes de:
 
 Consultei muito sobre documentação de RegEx, responsividade usando grid e flex-box e também sobre position no CSS.
 
-### Construído com
+### Desenvolvido com
 
 - HTML5
 - CSS3
